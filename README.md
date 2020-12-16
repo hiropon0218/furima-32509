@@ -16,6 +16,7 @@
 ### Association
 
 - has_many :items
+- has_many :purchases
 
 ##  itemsテーブル
 | Column           | Type       | Options                         |
@@ -52,7 +53,7 @@
 
 - belongs_to :purchase
 
-## purchaseテーブル (購入情報)
+## purchasesテーブル (購入情報)
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | user             | references | null: false, foreign_key: true |
