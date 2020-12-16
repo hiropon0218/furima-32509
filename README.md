@@ -18,16 +18,16 @@
 - has_many :items
 
 ##  itemsテーブル
-| Column        | Type     | Options     |
-| ------------- | -------- | ----------- |
-| item_name     | string   | null: false |
-| explanation   | text     | null: false |
-| category      | string   | null: false |
-| quality       | string   | null: false |
-| shipping_cost | string   | null: false |
-| sender_area   | string   | null: false |
-| ship_date     | string   | null: false |
-| price         | integer  | null: false |
+| Column           | Type      | Options     |
+| ---------------- | --------- | ----------- |
+| item_name        | string    | null: false |
+| explanation      | text      | null: false |
+| category_id      | integer   | null: false |
+| quality_id       | integer   | null: false |
+| shipping_cost_id | integer   | null: false |
+| sender_area_id   | integer   | null: false |
+| ship_date_id     | integer   | null: false |
+| price            | integer   | null: false |
 
 ### Association
 
