@@ -44,17 +44,8 @@
 | address       | string   | null: false |
 | building_name | string   | null: true  |
 | phone_number  | string   | null: false |
-
-### Association
-
-- belongs_to :purchase
-
-## credit_cardsテーブル (クレジットカード情報)
-| Column        | Type     | Options     |
-| ------------- | -------- | ----------- |
 | card_number   | integer  | null: false |
-| expiration_m  | integer  | null: false |
-| expiration_y  | integer  | null: false |
+| expiration    | date     | null: false |
 | security_code | integer  | null: false |
 
 ### Association
