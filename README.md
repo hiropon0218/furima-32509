@@ -11,9 +11,7 @@
 | first_name_kanji    | string   | null: false |
 | last_name_katakana  | string   | null: false |
 | first_name_katakana | string   | null: false |
-| date_of_birth_y     | integer  | null: false |
-| date_of_birth_m     | integer  | null: false |
-| date_of_birth_d     | integer  | null: false |
+| birthday            | date     | null: false |
 
 ### Association
 
