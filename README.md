@@ -33,7 +33,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :purchase
+- has_one :purchase
 
 ## shipping_addressesテーブル (配送先情報)
 | Column        | Type     | Options     |
