@@ -62,5 +62,3 @@
 
 - has_many :users
 - has_many :items
-- has_many :credit_cards
-- has_many :shipping_addresses
