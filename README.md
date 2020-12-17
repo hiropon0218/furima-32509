@@ -43,7 +43,7 @@
 | prefecture_id | integer  | null: false |
 | municipality  | string   | null: false |
 | address       | string   | null: false |
-| building_name | string   | null: true  |
+| building_name | string   |             |
 | phone_number  | string   | null: false |
 | card_number   | integer  | null: false |
 | expiration    | date     | null: false |
