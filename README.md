@@ -26,7 +26,7 @@
 | category_id      | integer    | null: false                     |
 | quality_id       | integer    | null: false                     |
 | shipping_cost_id | integer    | null: false                     |
-| sender_area_id   | integer    | null: false                     |
+| prefecture_id    | integer    | null: false                     |
 | ship_date_id     | integer    | null: false                     |
 | price            | integer    | null: false                     |
 | user             | references | null: false, foreign_key: true  |
