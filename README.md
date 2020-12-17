@@ -29,14 +29,14 @@
 | sender_area_id   | integer    | null: false                     |
 | ship_date_id     | integer    | null: false                     |
 | price            | integer    | null: false                     |
-| user             | references | null: false, foreign_key: true  |
+| user_id          | references | null: false, foreign_key: true  |
 
 ### Association
 
 - belongs_to :user
-- has_one :purchase
+- belongs_to :purchase
 
-## shipping_addressesテーブル (配送先情報)
+## shipping_informationテーブル (配送先情報)
 | Column        | Type     | Options     |
 | ------------- | -------- | ----------- |
 | postal_code   | string   | null: false |
@@ -56,11 +56,11 @@
 ## purchasesテーブル (購入情報)
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| user             | references | null: false, foreign_key: true |
-| item             | references | null: false, foreign_key: true |
+| user_id          | references | null: false, foreign_key: true |
+| item_id          | references | null: false, foreign_key: true |
 
 ### Association
 
 - has_many :users
 - has_many :items
-- has_one :shipping_addresses
+- has_one :shipping_information
