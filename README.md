@@ -29,7 +29,7 @@
 | sender_area_id   | integer    | null: false                     |
 | ship_date_id     | integer    | null: false                     |
 | price            | integer    | null: false                     |
-| user_id          | references | null: false, foreign_key: true  |
+| user             | references | null: false, foreign_key: true  |
 
 ### Association
 
