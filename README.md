@@ -45,9 +45,6 @@
 | address       | string   | null: false |
 | building_name | string   |             |
 | phone_number  | string   | null: false |
-| card_number   | integer  | null: false |
-| expiration    | date     | null: false |
-| security_code | integer  | null: false |
 
 ### Association
 
