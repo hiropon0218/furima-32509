@@ -3,12 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
- with_options presence: true do
-  validates :nickname
-  validates :birthday
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "is invalid. Input half-width alphanumeric characters."}
- end
+
+  has_many :items
+
+  with_options presence: true do
+    validates :nickname
+    validates :birthday
+    validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "is invalid. Input half-width alphanumeric characters."}
+  end
   
   with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥々]/, message: "is invalid. Input full-width characters."} do      
     validates :last_name_kanji 
