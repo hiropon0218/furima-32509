@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post 'items/index'
   root to: 'items#index'
 
+  resources :items, only: [:new, :create]
+
 end
