@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
 
   def new
     @item =Item.new
@@ -11,6 +12,8 @@ class ItemsController < ApplicationController
     else
       render new_item_path
     end
+
+
   end
   
 end
