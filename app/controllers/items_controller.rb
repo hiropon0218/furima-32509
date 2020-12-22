@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def new
-    @item =Item.new
+    @item = Item.new
   end
 
   def create
@@ -12,14 +12,12 @@ class ItemsController < ApplicationController
     else
       render new_item_path
     end
-
-
   end
-  
 end
 
 private
 
 def item_params
-  params.require(:item).permit(:image, :item_name, :explanation, :category_id, :quality_id, :shipping_cost_id, :prefecture_id, :ship_date_id, :price).merge(user_id: current_user.id)
+  params.require(:item).permit(:image, :item_name, :explanation, :category_id, :quality_id, :shipping_cost_id, :prefecture_id,
+                               :ship_date_id, :price).merge(user_id: current_user.id)
 end
