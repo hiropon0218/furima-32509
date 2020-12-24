@@ -30,9 +30,13 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
+  def destroy
+    @item.destroy
+    redirect_to root_path
   end
 
+  def show
+  end
 end
 
 private
