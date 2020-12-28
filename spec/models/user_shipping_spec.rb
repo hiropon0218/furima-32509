@@ -7,12 +7,18 @@ RSpec.describe UserShipping, type: :model do
 
   describe '商品購入機能' do
     context '商品購入が成功する時' do
-      it '郵便番号、都道府県、市区町村、番地、電話番号が存在する時（建物名は任意)' do
+      it 'token、郵便番号、都道府県、市区町村、番地、電話番号が存在する時（建物名は任意)' do
         expect(@user_shipping).to be_valid
       end
     end
 
     context '商品購入が失敗する時' do
+      it 'tokenが存在しない時' do
+        @user_shipping.token = nil
+        @user_shipping.valid?
+        expect(@user_shipping.errors.full_messages).to include("Token can't be blank")
+      end
+
       it '郵便番号が存在しない時' do
         @user_shipping.postal_code = nil
         @user_shipping.valid?
