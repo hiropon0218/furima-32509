@@ -10,6 +10,8 @@ with_options presence: true do
   validates :address
   validates :phone_number,     format: {with: /\A0\d{10,11}\z/, massage: 'Phone number Input only number'}
   validates :token
+  validates :user_id
+  validates :item_id
 end
 
   def save 

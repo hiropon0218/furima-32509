@@ -79,7 +79,18 @@ RSpec.describe UserShipping, type: :model do
         @user_shipping.valid?
         expect(@user_shipping.errors.full_messages).to include("Phone number is invalid")
       end
+      
+      it 'user_idが存在しない時' do
+        @user_shipping.user_id = nil
+        @user_shipping.valid?
+        expect(@user_shipping.errors.full_messages).to include("User can't be blank")
+      end
 
+      it 'item_idが存在しない時' do
+        @user_shipping.item_id = nil
+        @user_shipping.valid?
+        expect(@user_shipping.errors.full_messages).to include("Item can't be blank")
+      end
     end
   end
 end
