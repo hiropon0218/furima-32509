@@ -6,6 +6,8 @@ class PurchasesController < ApplicationController
     @item = Item.find(params[:item_id])
     if current_user.id == @item.user_id
       redirect_to root_path
+    elsif @item.purchase != nil
+      redirect_to root_path
     end
   end
 
