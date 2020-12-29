@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :ship_date
   belongs_to :user
+  has_one :purchase
   has_one_attached :image
 
   with_options numericality: { other_than: 1 } do
@@ -15,11 +16,12 @@ class Item < ApplicationRecord
     validates :prefecture_id
     validates :ship_date_id
   end
-
+  
   with_options presence: true do
     validates :image
     validates :item_name
     validates :explanation
     validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
   end
+  
 end

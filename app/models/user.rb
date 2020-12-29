@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :items
+  has_many :purchases
 
   with_options presence: true do
     validates :nickname
@@ -23,4 +24,6 @@ class User < ApplicationRecord
     validates :last_name_katakana
     validates :first_name_katakana
   end
+
+  
 end

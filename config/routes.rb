@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'items/index'
   root to: 'items#index'
 
-  resources :items, only: [:new, :create, :show, :edit, :update, :destroy]
-
+  resources :items, only: [:new, :create, :show, :edit, :update, :destroy] do
+   resources :purchases, only: [:index, :create]
+  end
 end
