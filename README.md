@@ -1,3 +1,7 @@
+# FURIMA 概要
+## FURIMAはCtoCフリーマーケットアプリです
+![image](https://gyazo.com/58d3492ace81f08e2907c498476d48e7raw)
+
 # テーブル設計
 
 ## usersテーブル
